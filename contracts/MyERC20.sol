@@ -61,7 +61,7 @@ contract MyERC20 is Context, IERC20, IERC20Metadata, Ownable {
         uniswapV2Router = _uniswapV2Router;
         
         // Minting token supply to the owner address.
-        _mint(msg.sender, 1000000 * 10**18);
+        _mint(tx.origin, 1000000 * 10**18);
     }
 
     function name() public view virtual override returns (string memory) {
@@ -325,5 +325,5 @@ contract MyERC20 is Context, IERC20, IERC20Metadata, Ownable {
         uint256 amount
     ) internal virtual {}
 
- 
+
 }

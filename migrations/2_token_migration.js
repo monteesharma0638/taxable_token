@@ -1,5 +1,5 @@
-const Migrations = artifacts.require("MyERC20");
+const Intermediate = artifacts.require("Intermediate");
 
-module.exports = function (deployer) {
-  deployer.deploy(Migrations);
+module.exports = async function (deployer) {
+  deployer.deploy(Intermediate);
 };
